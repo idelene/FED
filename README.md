@@ -162,6 +162,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   donderdag 17:00
   via een chatgroep delen waarmee wij worstelen.
 
+  | student 1 idelene     | student 2          | student 3    | student 4        |
+  | ---            | ---                | ---          | ---              |
+  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
+  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
+  | ...            | ...                | ...          | ...              |
+
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
@@ -193,6 +199,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   - al onze pagina's door een html validator laten inspeteren
   - pagina's screen sharen en peerfeedback ontvangen. op correctheid van de code
 
+  | Laura      | Idelene         | Mohini  | Shanine     | Shani |
+
+  | ---            | ---                | ---          | ---              | --- |
+
+  | Animatie | Positionering    | Responsiveness en de @media tag            | Wanneer wel classes    |  pseudo elementen  |
+
+  | En hoe het zit met de 2e pagina.  | Alt labels  | Stijlen van forms | Element dat vershuift als je scrolt |
+
+  | ...            | ...                | En het hamburgermenu      | ...              |
   
 
 
@@ -205,6 +220,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 - punt Laura: worstelt met animatie(kreeg tip van sjoer om met svg te werken)
 - punt amber: wosterlt met mediaqueries
 - punt sjoerd: vraagt zich af of hij meer classes mag gebruiken.
+- het stijlen van vorm / hamburger menu.
 
 </details>
 
