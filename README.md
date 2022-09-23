@@ -132,13 +132,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 2e werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/breakdownschets_fullpage.png" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+  <img src="readme-images/Breakdown-navigatie-.png" width="375px" alt="breakdown van een dynamisch deel">
 
   ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+  <img src="readme-images/Breakdownschets-1e-section.png" width="375px" alt="breakdown van nog een dynamisch deel">
 
 </details>
 
@@ -149,29 +149,28 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 ## Voortgang 1 (week 2)
 
 <details>
-  <summary>uitwerken voor 1e voortgang</summary>
+  <summary>Ik ben vooral geholpen bij het correct aanroepen van elementen met bijvoorbeeld nth-of-type</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  .ik vond het last om het ontzichtbare menu correct te positioneren hierbij heb ik hulp ontvangen.
+  .ook kreeg ik de tip om inplaats van <hr>-tjes, ::before/::after te gebruiken voor de strepen in mijn css 
 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  donderdag 17:00
+  via een chatgroep delen waarmee wij worstelen.
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+   student: iedereen worstelt met correct aanroepen van html elementen.
+   student: iedereen de algmene vraag om te kijken of wij de goede kant op gaan.
+
+
+
 
 </details>
 
@@ -189,22 +188,23 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Agenda voor meeting
-  samen met je groepje opstellen
+  vrijdag 10:00 meeting in teams starten.
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  - al onze pagina's door een html validator laten inspeteren
+  - pagina's screen sharen en peerfeedback ontvangen. op correctheid van de code
+
+  
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
+  
+- punt idelene: is mijn html pagina screenreader proef hoe kan ik dit beter doen
+- punt idelene: worstel met positioneren
+- punt Laura: worstelt met animatie(kreeg tip van sjoer om met svg te werken)
+- punt amber: wosterlt met mediaqueries
+- punt sjoerd: vraagt zich af of hij meer classes mag gebruiken.
 
 </details>
 
