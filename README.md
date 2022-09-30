@@ -32,7 +32,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 ## Je website
 
-<details open>
+<details>
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
@@ -230,22 +230,32 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 ## Toegankelijkheidstest 2/2 (week 4)
 
-<details>
+<details open>
   <summary>uitwerken na test in 8e werkgroep</summary>
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
 
+  Nog aanpassen:
+  - een aantal elemeten waren niet bereikbaar met de screanreader of tab.
+  - onlogishe voorleesvolgorde met screenreader.
+
+  Dit gaat best goed:
+  - ik heb een dark-mode yaay
+  - titels zijn beter te lezen voor mensen met visuelebeperkingen
+
   #### Screenreader
   Hier korte omschrijving (met indien nodig afbeeldingen)
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  de screenreader slaat nu een aantal objecten over maar dat kwam omdat ik ze geen area-label heb geven, kreeg ik te horen van een mede-student.
 
+  deze ga ik overal toevoegen
 
   #### Muis en Toetsenbord 
   Hier korte omschrijving (met indien nodig afbeeldingen)
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+ 
+ Je kan alleen tabben door interactive elementen en dat waren een heleboel elementen die mijn pagina niet. dut ga ik aanpassen
 
 
   #### Motoriek (shocks, elastiekjes)
@@ -253,11 +263,21 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
 
+  de website was goed te bedien met beperkte moteriek.
+  ik head best de klikbare links en dergelijke iets groter gemaakt
+
 
   #### Visueel (brillen, contrast, kleurenblind, dark/light). 
   Hier korte omschrijving (met indien nodig afbeeldingen)
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+
+
+ bij mijn eerst pagina ziet dark-mode er goed uit volgens mijn test partner.
+ alleen vind ik zelf dat ik nog wat kan werken aan manieren waarop de gebruiker duidenlijk onderscheid kan maken tussen verschillden secties.
+
+  <img src="readme-images/breakdownschets_fullpage.png" width="375px" alt="breakdown van de hele pagina">
+
+ <img>
 
 </details>
 
@@ -267,7 +287,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 ## Voortgang 3 (week 4)
 
-<details>
+<details open>
   <summary>uitwerken voor 3e voortgang</summary>
 
   ### Stand van zaken
@@ -277,7 +297,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
+  | student 1 idelene     | student 2          | student 3    | student 4  |       |
   | ---            | ---                | ---          | ---              |
   | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
   | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
@@ -287,9 +307,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
+  - punt 1: idelene: problemen met het werkend maken van de intersection observer api
+  - punt 2: idelene: waarom mijn body de kader-lijnen van mijn secties bedeken.
   - nog een punt
+  - punt 2: donna vraag over carrosel
+  - punt 3 sjoerd vraag over het images in buttons
+  - punt 4 laura vraag over een afbeelding wissel met javascript
   - ...
 
 </details>
@@ -330,8 +353,17 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
-  1. bron 1
-  2. bron 2
-  3. ...
+  1. bron [voor de boxshadows] https://codepen.io/greypants/pen/nRaZJB?editors=1100
+  
+  2. bron met behulp van Sundous [ centreren met calc()] https://developer.mozilla.org/en-US/docs/Web/CSS/calc
+
+  3. bron voor gebruikte verlopen - https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient
+
+  4.dispay grid met behulp van Sanne -https://codepen.io/shooft/pen/zYjEPrd
+
+  5.[ bron voor de verlegenheader ] https://webdesign.tutsplus.com/tutorials/how-to-hide-reveal-a-sticky-header-on-scroll-with-javascript--cms-33756
+
+  6. [bron voor de animaties 80fever pagina]
+
 
 </details>

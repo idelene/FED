@@ -22,13 +22,11 @@
   </head>
 
   <body>
-    <header>
+    <header class="shyheader">
       <section>
         <h1>
-          <img
-            src="images/vougue-logo-transparant.png"
-            alt="het logo van Vouge"
-          />
+          <a href=""> <img src="images/vougue-logo-transparant.png"
+            alt="het logo van Vouge"/></a>
         </h1>
         <section>
           <select>
@@ -38,35 +36,46 @@
             <option value="Option 4">Option 4 ▾</option>
             <option value="Option 5">Option 5 ▾</option>
           </select>
-	
+
+
+		  <a class="skip-to-content-link" href="#main">Skip to content</a>
+
+	<button aria-label="klik hier opm het menu te openen">
           <img
-            id="hamburger-menu-knop"
+          
             src="images/hamburger-menu.svg"
             alt="hamburger-menu"
           />
-		  <!--hidden navigatie-->
+		</button>
+		  <!--hidden navigatie begin-->
           <nav>
-            <div></div>
-				<img src="images/vougue-logo-transparant-wit.png" alt="het logo van Vouge-wit-van-kleur">
-				<h3>Volg ons</h3>
-				<ul>
-					<li><img src="images/snapchat-8.png" alt="" /></li>
-					<li> <img src="images/twitter-8.png" alt="" /></li>	
-					<li><img src="images/insta-8.png" alt="" /></li>
-					<li><img src="images/facebook-8.png" alt="" /></li></li>
-				</ul>
+           <button aria-label="sluit de navigatie" id="sluitknop"> close </button>
+
+				<a href="#" aria-label="het logo van vougue logo"><img src="images/vougue-logo-transparant-wit.png" alt="het logo van Vouge-wit-van-kleur"></a>
+				<section>
+					<h3>Volg onze social media pagina's</h3>
+					<ul>
+						<li><a href="#" aria-label="Volg onze snapchat account"><img src="images/snapchat-8.png" alt="Volg onze snapchat account" /></a></li>
+						<li> <a href="#" aria-label="Volg onze twitter account"><img src="images/twitter-8.png" alt="Volg onze twitter account" /></a></li>	
+						<li><a href="#" aria-label="Volg onze instagram account"><img src="images/insta-8.png" alt="Volg onze instagram account" /></a></li>
+						<li><a href="#" aria-label="Volg onze facebook account"><img src="images/facebook-8.png" alt="Volg onze facebook account" /></a></li></li>
+					</ul>
+				</section>
 				<ul>
 					<li><a href="#">Fashion</a></li>
 					<li><a href="#">living</a></li>
 					<li><a href="#">Beauty</a></li>
 					<li><a href="#">Culture</a></li>
 				</ul>
+
 				<ul>
 					<li><a href="#">Home</a></li>
 					<li><a href="#">Nieuwsbrief</a></li>
 					<li><a href="#">Shop</a></li>
 					<li><a href="#">Colofoon</a></li>
 				</ul>
+
+
 			
           </nav>
 		  <!--hidden navigatie end-->
@@ -84,7 +93,11 @@
       </nav>
     </header>
 
-    <main>
+	<a href="" role="button" aria-label="Toggle menu" class="lottie-wrapper">
+		<lottie-player src="https://assets10.lottiefiles.com/datafiles/9gIwZ2uiiKglyb0/data.json" style="width: 60px; height: 60px;"></lottie-player>
+	  </a>
+
+    <main id="main">
       <!--begin teaser hoofd artikel-->
       <section>
 		<h1>Hoofdartikel</h1>
@@ -92,15 +105,17 @@
           src="images/vogue-world-trends-najaar-2022-1600x900.jpeg"
           alt="foto van modelen na afloop fashionweek Newyork"
         />
-        <a href="#">Fashion</a>
-        <a href="">
-          <h2>
-            5 trends die je nu moet weten – zoals gezien op de runway van ‘Vogue
-            World: New York’
-          </h2>
-        </a>
-        <p>Marjolijn de Brand</p>
-        <time datetime="13-09-2022">13 September 2022</time>
+		<section>
+			<a href="#">Fashion</a>
+			<a href="#">
+			<h2>
+				5 trends die je nu moet weten – zoals gezien op de runway van ‘Vogue
+				World: New York’
+			</h2>
+			</a>
+			<p>Marjolijn de Brand</p>
+			<time datetime="13-09-2022">13 September 2022</time>
+		</section>
       </section>
       <!--einde teaser hoofd artikel-->
 
@@ -137,6 +152,7 @@
 			alt="afbeelding van een vrouw in een bloemveld. Haar gezicht volledig bedekt met glinsterende goude make-up. "/>
 			  <ul>
 				  <li>
+					<a href="#">Fashion</a>
 					<a href="#">
 						<h2>
 						  Vogue’s cultuuragenda: de mooiste tentoonstellingen en
@@ -144,7 +160,32 @@
 						</h2>
 					  </a>
 					  
-					  <a href="#">Partners</a>
+					  
+					  <a href="#">Vouge</a>
+					 
+					  <time datetime="13-09-2022">13 SEPTEMBER 2022</time>
+
+				  </li>
+				</ul>
+            
+          </li>
+
+		
+
+		  <li>
+			<img
+			src="https://www.vogue.nl/wp-content/uploads/2022/09/Copenhagen-Fashion-Week-by-AcielleStyleDuMonde-kopie-400x600.jpg"
+			alt="afbeelding van een vrouw in een bloemveld. Haar gezicht volledig bedekt met glinsterende goude make-up. "/>
+			  <ul>
+				  <li>
+					<a href="#">Fashion</a>
+					<a href="#">
+						<h2>
+							Westernmode en cowboylooks uitgelegd – waar komen de stijlen vandaan?
+						</h2>
+					  </a>
+					  
+					  
 					  <a href="#">Vouge</a>
 					 
 					  <time datetime="13-09-2022">13 SEPTEMBER 2022</time>
@@ -156,6 +197,16 @@
       
      
         </ul>
+		<section>
+			
+					<h3>Vouge <br> oktober 2022</h3>
+				  
+					<img src="https://www.vogue.nl/wp-content/uploads/2022/09/001_VOGUE_07_-COVER-250x325.jpg" alt="cover afbeelding van de vouge tijdschrift Issue oktober 2022 ">
+					<button> bestel hier!
+  
+					</button>
+			
+		</section>
       </section>
 	  <!--einde section 2 Top artikelen-->
 
@@ -165,14 +216,18 @@
         <h1>Beauty</h1>
 
         <section>
-          <img
+          <h2>Zilver is het nieuwe zwart in de schoenentrends dit najaar – en wij zijn fan</h2>
+
+		  <p>Laura Severi</p>
+		  <p>23 September 2022</p>
+		 
+		  <img
             src="images/party-brows-peter-do-lente-zomer-2023-nyfw-640x960.jpeg"
             alt=""
           />
-		  <div></div>
-		  <h2>Zilver is het nieuwe zwart in de schoenentrends dit najaar – en wij zijn fan</h2>
-		  <p>Laura Severi</p>
-		  <p>23 September 2022</p>
+		  
+		  
+		  
         </section>
 
         <ul>
@@ -183,13 +238,12 @@
                 2023
               </h2>
             </a>
-            <img src="" alt="" />
             <a href="#">Fashion</a>
-            <a href="#">Vouge</a>
             <img
               src="images/tim-walker-cloud-9-350x350.jpeg"
               alt="afbeelding van een vrouw in een bloemveld. Haar gezicht volledig bedekt met glinsterende goude make-up. "
             />
+			<p>Laura Severi</p>
             <time datetime="13-09-2022">13 SEPTEMBER 2022</time>
           </li>
      
@@ -199,34 +253,58 @@
       </section>
 	  <!--einde section 3 Beauty-->
     </main>
+
     <footer>
       <ul>
         <li>
-          <img src="images/vougue-logo.png" alt="" />
+          <img src="images/vougue-logo-transparant-wit.png" alt="" />
         </li>
         <li>
-          <img src="images/snapchat-8.png" alt="" />
-          <img src="images/twitter-8.png" alt="" />
-          <img src="images/insta-8.png" alt="" />
-          <img src="images/facebook-8.png" alt="" />
+			<ul>
+				<li><img src="images/snapchat-8.png" alt="" /></li>
+				<li> <img src="images/twitter-8.png" alt="" /></li>	
+				<li><img src="images/insta-8.png" alt="" /></li>
+				<li><img src="images/facebook-8.png" alt="" /></li>
+			</ul>
         </li>
       </ul>
-      <hr />
-      <nav>
-        <a href="#"></a>
-        <a href="#"></a>
-        <a href="#"></a>
-      </nav>
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+
+
+	  <ul>
+		  <li>Home</li>
+		  <li>Adverteren</li>
+		  <li>Nieuwsbrief</li>
+		  <li>Colofon</li>
+		  <li>Gebruiksvoorwaarden</li>
+		  <li>Privacy Verklaring</li>
+		  <li>Cookieverklaring</li>
+		  <li>Shop</li>
+		  <li>Cookie-instellingen</li>
+	  </ul>
+
+     
       <ul>
-        <button role="menuitem">Nederland</button>
-        <ul>
-          <li><a href="#">Engels</a></li>
-          <li><a href="#">Frans</a></li>
-          <li><a href="#">Duits</a></li>
-          <li><a href="#">Spaans</a></li>
-          <li><a href="#">Italiaans</a></li>
-        </ul>
+		<select>
+            <option value="Option 1">Nederlands 1 ▾</option>
+            <option value="Option 2">Option 2 ▾</option>
+            <option value="Option 3">Option 3 ▾</option>
+            <option value="Option 4">Option 4 ▾</option>
+            <option value="Option 5">Option 5 ▾</option>
+          </select>
+    
       </ul>
+
+
       <ul>
         <li>
           <p>© 2022 idelene martis test</p>
@@ -235,11 +313,12 @@
           <a href="#">theme provided by me yaaay</a>
         </li>
         <li>
-          <img src="/images/footer-nxcode_logo_text_black.jpeg" alt="" />
+          <img src="images/footer-nxcode_logo_text_black.jpeg" alt="" />
         </li>
       </ul>
     </footer>
 
     <script src="scripts/script.js"></script>
   </body>
+  
 </html>

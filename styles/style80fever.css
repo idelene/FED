@@ -1,0 +1,499 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+html {
+  overflow-x: hidden;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,400;1,6..96,500;1,6..96,600&family=Domine:wght@400;500;600;700&family=WindSong:wght@400;500&display=swap");
+
+button,
+summary {
+  cursor: pointer;
+}
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+
+:root {
+  /* startje */
+  --color-text: #111;
+  --color-background: #eee;
+  --color-background: rgb(0, 0, 0);
+  --select-border: #777;
+  --select-focus: blue;
+  --select-arrow: var(--select-border);
+}
+
+/****************/
+/* JOUW STYLING */
+/****************/
+
+/* jouw code */
+
+body {
+  height: 16000px;
+  overflow: hidden;
+  background: linear-gradient(
+    to bottom,
+    rgb(237, 193, 213) 0%,
+    rgb(73, 82, 186) 100%
+  );
+  position: relative;
+}
+
+main {
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+}
+
+iframe {
+  width: 375px;
+  height: 315px;
+}
+
+/* .feverpagina {
+  
+} */
+
+.feverpagina > header {
+  position: relative;
+}
+
+.feverpagina > header h1 {
+  position: absolute;
+  left: 0.8em;
+  font-size: 5em;
+color:yellow;
+text-shadow: 1px 5px 1px black;
+white-space: pre-line;
+  display: block;
+  transform: rotate(-25deg);
+
+  font-family: "WindSong", cursive;
+}
+
+.feverpagina > header img:nth-of-type(1) {
+  position: absolute;
+  height: 3em;
+  width: auto;
+  display: block;
+
+  top: 36em;
+  left: calc(50% - 182.8px / 2);
+}
+
+.feverpagina > header img:nth-of-type(2) {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  object-position: 40% 10%;
+  margin-bottom: 10%;
+  display: block;
+}
+
+.feverpagina main section {
+  margin-bottom: 20em;
+}
+
+.feverpagina main section:nth-of-type(1) {
+  margin-top: 20em;
+  height: 50vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feverpagina main section:nth-of-type(1) > div:nth-last-of-type(1) {
+  display: block;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #ffc2be;
+  border: solid 10px #fff3b1;
+  box-shadow: 20px 20px 0 5px #d699ce;
+  top: -5.5em;
+  left: 0.5em;
+  z-index: 2;
+}
+
+.feverpagina main section:nth-of-type(1) > div:nth-last-of-type(2) {
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 100px;
+  top: -15.5em;
+  left: 5em;
+  background-color: #ffc2be;
+  border: solid 10px #fff3b1;
+  box-shadow: 20px 20px 0 5px #d699ce;
+  z-index: 2;
+}
+
+.animate {
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  bottom: -5em;
+  background-color: #ffc2be;
+  border: solid 10px #fff3b1;
+  box-shadow: 20px 20px 0 5px #d699ce;
+  z-index: 2;
+  content: "";
+  transform: translateX(100px);
+  opacity: 1;
+  transition: 150ms;
+}
+
+.animate .show {
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  bottom: -5em;
+  background-color: #ffc2be;
+  border: solid 10px #fff3b1;
+  box-shadow: 20px 20px 0 5px #d699ce;
+  z-index: 2;
+  content: "";
+  transform: translateX(0px);
+  opacity: 1;
+  transition: 150ms;
+}
+
+/* .animate .show{
+	transform: translateX(0);
+	opacity: 1;
+
+} */
+
+.feverpagina main section:nth-of-type(1) section {
+  width: 90vw;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 0.5em 0 0.5em;
+
+  /* margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 10px;
+    margin-right: 10px; */
+
+  border: solid 1px #000;
+  font-size: 22px;
+}
+
+.feverpagina main section:nth-of-type(1) section span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: flex-end;
+
+  border: solid #000;
+  border-width: 0 0 00.05em 0;
+
+  z-index: 0;
+}
+
+.feverpagina main section:nth-of-type(1) section span span {
+  position: absolute;
+  top: 0;
+  left: 85%;
+
+  width: 10%;
+  height: 100%;
+
+  border: solid #000;
+  border-width: 0 0 0 00.05em;
+
+  z-index: 0;
+}
+
+.feverpagina main section:nth-of-type(2) {
+  margin: 250px 40px 0 0;
+}
+
+.feverpagina main section:nth-of-type(3) {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.feverpagina main section:nth-of-type(4) {
+  margin: 50px 40px 0 0;
+
+  width: 100vw;
+
+  padding: 0;
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feverpagina main section:nth-of-type(4) img {
+  width: 20em;
+  height: 27em;
+  margin-top: 5em;
+}
+
+.feverpagina main section:nth-of-type(5) {
+  margin: 250px 40px 0 0;
+
+  width: 100vw;
+  height: 60vh;
+  padding: 0;
+  position: relative;
+}
+
+.feverpagina main section:nth-of-type(6) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 500px 40px 0 0;
+
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  position: relative;
+}
+
+.feverpagina main section:nth-of-type(6) img:nth-of-type(1) {
+  left: -1em;
+
+  padding: 0;
+  position: absolute;
+}
+.feverpagina main section:nth-of-type(6) img:nth-of-type(2) {
+  bottom: 3em;
+  right: 1em;
+
+  padding: 0;
+  position: absolute;
+}
+
+.feverpagina main section:nth-of-type(8) {
+  margin: 250px 40px 0 0;
+
+  width: 100vw;
+
+  padding: 0;
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feverpagina main section:nth-of-type(8) img:nth-of-type(1) {
+  /* width: 23em; */
+  width: 90%;
+}
+
+.feverpagina main section:nth-of-type(8) img:nth-of-type(2) {
+  /* width: 23em; */
+  width: 90%;
+  margin-bottom: 10em;
+}
+
+.feverpagina main section:nth-of-type(8) img:nth-of-type(3) {
+  /* width: 23em; */
+  width: 90%;
+  margin-bottom: 10em;
+}
+
+.feverpagina main section:nth-of-type(8) img {
+  width: 100vw;
+
+  margin-bottom: 10em;
+}
+
+.feverpagina main section:nth-of-type(8) img:nth-of-type(9) {
+  /* width: 23em; */
+
+  margin-top: 10em;
+}
+
+.feverpagina main section:nth-of-type(9) {
+  margin: 0;
+
+  width: 100vw;
+  height: 120vh;
+  padding: 0;
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feverpagina main section:nth-of-type(9) ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feverpagina main section:nth-of-type(9) ul li {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5em;
+}
+
+.feverpagina main section:nth-of-type(9) h2 {
+  font-family: "WindSong", cursive;
+  font-style: italic;
+  font-size: 2.5em;
+  margin-bottom: 2em;
+}
+
+.feverpagina main section:nth-of-type(9) p {
+  font-size: 0.9em;
+  width: 80%;
+}
+
+.feverpagina footer {
+  border: solid;
+  height: 100vh;
+  margin-top: 9.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  bottom: 0px;
+
+  width: 100%;
+}
+
+.feverpagina footer h2 {
+  font-family: "WindSong", cursive;
+  font-style: italic;
+  font-size: 2.5em;
+  margin-bottom: 2em;
+}
+
+.feverpagina footer section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+  /* margin-bottom: 5em; */
+  height: 1300px;
+  border: solid;
+  border-width: 0.1em 0 0.1em 0;
+  align-content: space-around;
+  padding-bottom: 2em;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto; */
+}
+
+.feverpagina footer section a:first-of-type {
+  text-align: center;
+}
+
+.feverpagina footer section a:nth-of-type(2),
+a:nth-of-type(3) {
+  width: 100px;
+  height: 100px;
+  background-color: #ffc2be;
+  border: solid 10px #fff3b1;
+  box-shadow: 20px 20px 0 5px #d699ce;
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto; */
+}
+
+.feverpagina footer section a:nth-of-type(2) img,
+a:nth-of-type(3) img {
+  width: 4em;
+  height: 4em;
+
+  /* display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto; */
+}
+
+.feverpagina footer ul {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  margin-bottom: 2em;
+}
+.feverpagina footer ul li {
+  margin-bottom: 1em;
+}
+
+/* .feverpagina footer section a img:first-child {
+    width: 100%;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+  .feverpagina footer section a img:nth-of-type(2){
+    grid-row-start: 1;
+    grid-row-end: 2;
+  
+    grid-column-start: 2;
+    grid-column-end: 3;
+    
+  }
+
+  .feverpagina footer section a img:nth-of-type(3){
+    grid-row-start: 2;
+    grid-row-end: 3;
+  
+    grid-column-start: 2;
+    grid-column-end: 3;
+   
+  }
+ */
+
+.feverpagina footer a:first-of-type img {
+  width: 50%;
+}
+
+/* content: '';
+display: block;
+position: absolute;
+top: -130px;
+left: calc(50% - 20px);
+right: 0;
+width: 40px;
+height: 100vw;
+background-image: url(https://cdn.vogue.es/micros/tendencias-moda-anos-80/resources/images/tendencias-80-v-lines-bg.png);
+background-size: auto 100%;
+background-repeat: no-repeat;
+background-position: center;
+transform: rotate(90deg);
+
+xmlns="http://www.w3.org/2000/svg" */
