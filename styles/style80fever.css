@@ -27,11 +27,17 @@ summary {
 :root {
   /* startje */
   --color-text: #111;
-  --color-background: #eee;
+  --border-lines: #111;
   --color-background: rgb(0, 0, 0);
-  --select-border: #777;
-  --select-focus: blue;
-  --select-arrow: var(--select-border);
+  --bg-color-div: #ffc2be;
+  --border-color-div: #fff3b1;
+  --shadow-color-div: #d699ce;
+  --shadow-color2-div: #aa75a3;
+  --titelHeadings-color: gold;
+  --creditsText-color: #a8ffb9;
+  --creditsTextLinks-color: gold;
+  --color-white: #fff;
+  --color-black: #111;
 }
 
 /****************/
@@ -41,7 +47,7 @@ summary {
 /* jouw code */
 
 body {
-  height: 16000px;
+  height: inherit;
   overflow: hidden;
   background: linear-gradient(
     to bottom,
@@ -51,12 +57,19 @@ body {
   position: relative;
 }
 
-main {
+body > div:first-of-type {
+  z-index: 100;
+  width: 4em;
+  height: 5em;
+
+  top: 0;
+  position: fixed;
 }
 
 p {
   font-family: "Montserrat", sans-serif;
   font-weight: lighter;
+  color: var(--color-text);
 }
 
 iframe {
@@ -64,28 +77,51 @@ iframe {
   height: 315px;
 }
 
-/* .feverpagina {
-  
-} */
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
 
 .feverpagina > header {
   position: relative;
 }
 
+.feverpagina > header svg {
+  width: 50%;
+  position: absolute;
+  top: -19em;
+  right: 1em;
+
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 100));
+}
+
+.feverpagina > header svg path {
+  width: 50%;
+  position: absolute;
+  fill: var(--color-white);
+}
+
 .feverpagina > header h1 {
   position: absolute;
+  top: 1.5em;
   left: 0.8em;
-  font-size: 5em;
-color:yellow;
-text-shadow: 1px 5px 1px black;
-white-space: pre-line;
+  font-size: 8em;
+  line-height: 1em;
+  color: var(--titelHeadings-color);
+  text-shadow: 1px 5px 1px var(--border-lines);
+  white-space: pre-line;
   display: block;
   transform: rotate(-25deg);
 
   font-family: "WindSong", cursive;
 }
 
-.feverpagina > header img:nth-of-type(1) {
+/* .feverpagina > header img:nth-of-type(1) {
   position: absolute;
   height: 3em;
   width: auto;
@@ -93,9 +129,9 @@ white-space: pre-line;
 
   top: 36em;
   left: calc(50% - 182.8px / 2);
-}
+} */
 
-.feverpagina > header img:nth-of-type(2) {
+.feverpagina > header img:nth-of-type(1) {
   height: 100vh;
   width: 100vw;
   object-fit: cover;
@@ -104,17 +140,81 @@ white-space: pre-line;
   display: block;
 }
 
-.feverpagina main section {
-  margin-bottom: 20em;
-}
+/**main***/
 
 .feverpagina main section:nth-of-type(1) {
-  margin-top: 20em;
-  height: 50vh;
+  /* margin-top: 20em; */
+  height: 100vh;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+/************************************************************/
+
+@keyframes ik-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  17.5% {
+    transform: translate(0, 2rem);
+  }
+  32.5% {
+    transform: translate(0rem, 4rem);
+  }
+  67.5% {
+    transform: translate(0rem, -4rem);
+  }
+  82.5% {
+    transform: translate(0, -2rem);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes ea-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  17.5% {
+    transform: translate(0, -1rem);
+  }
+  32.5% {
+    transform: translate(0rem, -2rem);
+  }
+  67.5% {
+    transform: translate(0rem, 2rem);
+  }
+  82.5% {
+    transform: translate(0, 1rem);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.feverpagina main section:nth-of-type(1) > div:first-of-type {
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 0em;
+  left: 10em;
+  background-color: var(--bg-color-div);
+  border: solid 10px var(--border-color-div);
+  box-shadow: 20px 20px 0 5px var(--shadow-color-div);
+  z-index: 2;
+  content: "";
+
+  opacity: 1;
+  transition: 150ms;
+}
+.feverpagina main section:nth-of-type(1) > div:first-of-type:hover {
+  animation-name: ik-animation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 .feverpagina main section:nth-of-type(1) > div:nth-last-of-type(1) {
@@ -122,63 +222,44 @@ white-space: pre-line;
   position: absolute;
   width: 100px;
   height: 100px;
-  background-color: #ffc2be;
-  border: solid 10px #fff3b1;
-  box-shadow: 20px 20px 0 5px #d699ce;
-  top: -5.5em;
+  background-color: var(--bg-color-div);
+  border: solid 10px var(--border-color-div);
+  box-shadow: 20px 20px 0 5px var(--shadow-color-div);
+  top: 5em;
   left: 0.5em;
   z-index: 2;
+}
+.feverpagina main section:nth-of-type(1) > div:nth-last-of-type(1) {
+  animation-name: ea-animation;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 .feverpagina main section:nth-of-type(1) > div:nth-last-of-type(2) {
   display: block;
   position: absolute;
-  width: 50px;
-  height: 100px;
-  top: -15.5em;
-  left: 5em;
-  background-color: #ffc2be;
-  border: solid 10px #fff3b1;
-  box-shadow: 20px 20px 0 5px #d699ce;
-  z-index: 2;
-}
-
-.animate {
-  display: block;
-  position: absolute;
-  width: 50px;
+  width: 100px;
   height: 50px;
-  bottom: -5em;
-  background-color: #ffc2be;
-  border: solid 10px #fff3b1;
-  box-shadow: 20px 20px 0 5px #d699ce;
+  bottom: 6em;
+  right: 5em;
+  background-color: var(--bg-color-div);
+  border: solid 10px var(--border-color-div);
+  box-shadow: 20px 20px 0 5px var(--shadow-color-div);
   z-index: 2;
-  content: "";
-  transform: translateX(100px);
-  opacity: 1;
-  transition: 150ms;
+}
+.feverpagina main section:nth-of-type(1) > div:nth-last-of-type(2) {
+  animation-name: ea-animation;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
-.animate .show {
-  display: block;
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  bottom: -5em;
-  background-color: #ffc2be;
-  border: solid 10px #fff3b1;
-  box-shadow: 20px 20px 0 5px #d699ce;
-  z-index: 2;
-  content: "";
-  transform: translateX(0px);
-  opacity: 1;
-  transition: 150ms;
-}
-
-/* .animate .show{
-	transform: translateX(0);
-	opacity: 1;
-
+/* .feverpagina main section:nth-of-type(1) > div:nth-last-of-type(2),div:nth-last-of-type(2),div:first-of-type:hover{
+  animation-name:ik-animation;
+  animation-duration:3s;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear; 
 } */
 
 .feverpagina main section:nth-of-type(1) section {
@@ -188,13 +269,7 @@ white-space: pre-line;
   flex-direction: column;
   justify-content: center;
   padding: 0 0.5em 0 0.5em;
-
-  /* margin-top: 40px;
-    margin-bottom: 40px;
-    margin-left: 10px;
-    margin-right: 10px; */
-
-  border: solid 1px #000;
+  border: solid 1px var(--border-lines);
   font-size: 22px;
 }
 
@@ -206,30 +281,45 @@ white-space: pre-line;
   height: 10%;
   display: flex;
   justify-content: flex-end;
-
-  border: solid #000;
+  border: solid var(--border-lines);
   border-width: 0 0 00.05em 0;
-
   z-index: 0;
+}
+
+.feverpagina main section:nth-of-type(1) section span h2 {
+  color: var(--color-text);
 }
 
 .feverpagina main section:nth-of-type(1) section span span {
   position: absolute;
   top: 0;
   left: 85%;
-
   width: 10%;
   height: 100%;
-
-  border: solid #000;
+  border: solid var(--border-lines);
   border-width: 0 0 0 00.05em;
-
   z-index: 0;
 }
 
+/*complete einde section 1 introduction*/
+
 .feverpagina main section:nth-of-type(2) {
-  margin: 250px 40px 0 0;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 10em;
 }
+
+.feverpagina main section:nth-of-type(2) iframe {
+  width: 100vw;
+}
+.feverpagina main section:nth-of-type(2) img:first-of-type {
+  width: 100vw;
+}
+
+/*****section 2 content katty******/
 
 .feverpagina main section:nth-of-type(3) {
   position: relative;
@@ -237,107 +327,135 @@ white-space: pre-line;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  height: fit-content;
+  row-gap: 15em;
+  /* background-color: green; */
 }
+
+.feverpagina main section:nth-of-type(3) iframe {
+  width: 100vw;
+}
+
+.feverpagina main section:nth-of-type(3) div:first-of-type {
+  width: 10em;
+  height: 6em;
+  background-color: var(--bg-color-div);
+  border: solid 10px var(--border-color-div);
+  box-shadow: 20px 20px 0 5px #aa75a3;
+  position: absolute;
+  z-index: -1;
+  top: 63em;
+  left: 0.5em;
+}
+
+.feverpagina main section:nth-of-type(3) div:first-of-type::after {
+  width: 9em;
+  height: 1em;
+  display: block;
+  content: "";
+  background-color: var(--border-color-div);
+  top: 2em;
+  position: absolute;
+}
+
+.feverpagina main section:nth-of-type(3) img:nth-of-type(2) {
+  width: 100vw;
+}
+
+.feverpagina main section:nth-of-type(3) div:nth-of-type(2) {
+  width: 100vw;
+  height: 80vh;
+  position: relative;
+}
+
+.feverpagina main section:nth-of-type(3) div:nth-of-type(2) img:nth-of-type(1) {
+  left: -1.5em;
+  padding: 0;
+  position: absolute;
+}
+
+.feverpagina main section:nth-of-type(3) div:nth-of-type(2) img:nth-of-type(2) {
+  left: 10em;
+  bottom: 1em;
+  padding: 0;
+  position: absolute;
+  width: 45%;
+}
+.feverpagina main section:nth-of-type(3) div:nth-of-type(2) img:nth-of-type(2) {
+  animation-name: ik-animation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.feverpagina main section:nth-of-type(3) img:nth-of-type(3) {
+  width: 100vw;
+}
+
+.feverpagina main section:nth-of-type(3) div:nth-of-type(3) {
+  width: 80vw;
+  height: fit-content;
+}
+
+.feverpagina main section:nth-of-type(3) div:nth-of-type(3) img:first-of-type {
+  width: 100%;
+}
+.feverpagina main section:nth-of-type(3) div:nth-of-type(3) img:nth-of-type(2) {
+  width: 100%;
+}
+
+.feverpagina main section:nth-of-type(3) img:nth-of-type(4) {
+  width: 100vw;
+}
+.feverpagina main section:nth-of-type(3) img:nth-of-type(5) {
+  width: 80vw;
+}
+
+/****einde section conten van katty*****/
+
+/*****begin section content van Xinyi*********/
 
 .feverpagina main section:nth-of-type(4) {
-  margin: 50px 40px 0 0;
-
   width: 100vw;
-
+  height: fit-content;
+  row-gap: 15em;
   padding: 0;
-  /* position: relative; */
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  margin-bottom: 15em;
 }
 
-.feverpagina main section:nth-of-type(4) img {
-  width: 20em;
-  height: 27em;
-  margin-top: 5em;
+.feverpagina main section:nth-of-type(4) img:nth-of-type(1) {
+  width: 100vw;
 }
+.feverpagina main section:nth-of-type(4) img:nth-of-type(4) {
+  width: 100vw;
+}
+
+.feverpagina main section:nth-of-type(4) iframe {
+  width: 100vw;
+}
+
+.feverpagina main section:nth-of-type(4) img:nth-of-type(5) {
+  width: 100vw;
+}
+
+.feverpagina main section:nth-of-type(4) img:last-of-type {
+  width: 100vw;
+}
+
+/*****einde section content van Xinyli*********/
+
+/**begin section credits**/
 
 .feverpagina main section:nth-of-type(5) {
-  margin: 250px 40px 0 0;
-
-  width: 100vw;
-  height: 60vh;
-  padding: 0;
-  position: relative;
-}
-
-.feverpagina main section:nth-of-type(6) {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 500px 40px 0 0;
-
-  width: 100vw;
-  height: 100vh;
-  padding: 0;
-  position: relative;
-}
-
-.feverpagina main section:nth-of-type(6) img:nth-of-type(1) {
-  left: -1em;
-
-  padding: 0;
-  position: absolute;
-}
-.feverpagina main section:nth-of-type(6) img:nth-of-type(2) {
-  bottom: 3em;
-  right: 1em;
-
-  padding: 0;
-  position: absolute;
-}
-
-.feverpagina main section:nth-of-type(8) {
-  margin: 250px 40px 0 0;
-
-  width: 100vw;
-
-  padding: 0;
-  /* position: relative; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.feverpagina main section:nth-of-type(8) img:nth-of-type(1) {
-  /* width: 23em; */
-  width: 90%;
-}
-
-.feverpagina main section:nth-of-type(8) img:nth-of-type(2) {
-  /* width: 23em; */
-  width: 90%;
-  margin-bottom: 10em;
-}
-
-.feverpagina main section:nth-of-type(8) img:nth-of-type(3) {
-  /* width: 23em; */
-  width: 90%;
-  margin-bottom: 10em;
-}
-
-.feverpagina main section:nth-of-type(8) img {
-  width: 100vw;
-
-  margin-bottom: 10em;
-}
-
-.feverpagina main section:nth-of-type(8) img:nth-of-type(9) {
-  /* width: 23em; */
-
-  margin-top: 10em;
-}
-
-.feverpagina main section:nth-of-type(9) {
   margin: 0;
-
   width: 100vw;
-  height: 120vh;
+  height: fit-content;
   padding: 0;
   /* position: relative; */
   display: flex;
@@ -345,14 +463,14 @@ white-space: pre-line;
   align-items: center;
 }
 
-.feverpagina main section:nth-of-type(9) ul {
+.feverpagina main section:nth-of-type(5) ul {
   list-style: none;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.feverpagina main section:nth-of-type(9) ul li {
+.feverpagina main section:nth-of-type(5) ul li {
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -360,21 +478,49 @@ white-space: pre-line;
   margin-bottom: 5em;
 }
 
-.feverpagina main section:nth-of-type(9) h2 {
+.feverpagina main section:nth-of-type(5) h2 {
   font-family: "WindSong", cursive;
   font-style: italic;
   font-size: 2.5em;
   margin-bottom: 2em;
+  color: var(--titelHeadings-color);
 }
 
-.feverpagina main section:nth-of-type(9) p {
+.feverpagina main section:nth-of-type(5) p {
   font-size: 0.9em;
   width: 80%;
+  color: var(--creditsText-color);
+}
+
+/**einde  section credits**/
+
+.feverpagina footer ul::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 50em;
+  left: calc(50% - 20px);
+  right: 0;
+  width: 40px;
+  height: 100vw;
+  background-image: url(https://cdn.vogue.es/micros/tendencias-moda-anos-80/resources/images/tendencias-80-v-lines-bg.png);
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotate(90deg);
+}
+
+.feverpagina footer li {
+  color: var(--creditsText-color);
+}
+
+.feverpagina footer a {
+  color: var(--titelHeadings-color);
 }
 
 .feverpagina footer {
   border: solid;
-  height: 100vh;
+  /* height: 160vh; */
   margin-top: 9.5em;
   display: flex;
   flex-direction: column;
@@ -389,6 +535,7 @@ white-space: pre-line;
   font-style: italic;
   font-size: 2.5em;
   margin-bottom: 2em;
+  color: var(--titelHeadings-color);
 }
 
 .feverpagina footer section {
@@ -398,7 +545,7 @@ white-space: pre-line;
   justify-content: center;
   gap: 2em;
   /* margin-bottom: 5em; */
-  height: 1300px;
+  height: 50vh;
   border: solid;
   border-width: 0.1em 0 0.1em 0;
   align-content: space-around;
@@ -416,26 +563,32 @@ white-space: pre-line;
 a:nth-of-type(3) {
   width: 100px;
   height: 100px;
-  background-color: #ffc2be;
-  border: solid 10px #fff3b1;
-  box-shadow: 20px 20px 0 5px #d699ce;
+  background-color: var(--bg-color-div);
+  border: solid 10px var(--border-color-div);
+  box-shadow: 20px 20px 0 5px var(--shadow-color-div);
   display: flex;
   align-items: center;
 
   justify-content: center;
-  /* display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto; */
 }
 
-.feverpagina footer section a:nth-of-type(2) img,
-a:nth-of-type(3) img {
+.feverpagina footer section a:nth-of-type(2) svg,
+a:nth-of-type(3) svg {
   width: 4em;
   height: 4em;
+}
 
-  /* display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto; */
+.feverpagina footer section a:nth-of-type(3):hover {
+  animation-name: ea-animation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.feverpagina footer section a:nth-of-type(2):hover {
+  animation-name: ea-animation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 .feverpagina footer ul {
@@ -443,57 +596,122 @@ a:nth-of-type(3) img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
   list-style: none;
   margin-bottom: 2em;
 }
-.feverpagina footer ul li {
+.feverpagina footer ul:nth-of-type(2) li {
   margin-bottom: 1em;
+  color: var(--color-text);
+  text-align: center;
+  line-height: 1.5em;
 }
 
-/* .feverpagina footer section a img:first-child {
-    width: 100%;
-    grid-row-start: 1;
-    grid-row-end: 3;
-  
-    grid-column-start: 1;
-    grid-column-end: 2;
+.feverpagina footer ul:nth-of-type(2) {
+  height: 20em;
+  border: solid;
+  width: 100vw;
+  margin: 0;
 }
-
-  .feverpagina footer section a img:nth-of-type(2){
-    grid-row-start: 1;
-    grid-row-end: 2;
-  
-    grid-column-start: 2;
-    grid-column-end: 3;
-    
-  }
-
-  .feverpagina footer section a img:nth-of-type(3){
-    grid-row-start: 2;
-    grid-row-end: 3;
-  
-    grid-column-start: 2;
-    grid-column-end: 3;
-   
-  }
- */
 
 .feverpagina footer a:first-of-type img {
   width: 50%;
 }
+.feverpagina footer button {
+  appearance: none;
+  height: 3em;
+  width: 10em;
+  background-color: var(--color-white);
+  border-style: none;
+  border-radius: 3px;
+  color: var(--color-text);
+}
 
-/* content: '';
-display: block;
-position: absolute;
-top: -130px;
-left: calc(50% - 20px);
-right: 0;
-width: 40px;
-height: 100vw;
-background-image: url(https://cdn.vogue.es/micros/tendencias-moda-anos-80/resources/images/tendencias-80-v-lines-bg.png);
-background-size: auto 100%;
-background-repeat: no-repeat;
-background-position: center;
-transform: rotate(90deg);
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* startje */
+    --color-text: white;
+    --border-lines: white;
+    --color-background: rgb(0, 0, 0);
+    --bg-color-div: #ffc2be;
+    --border-color-div: #fff3b1;
+    --shadow-color-div: #d699ce;
+    --shadow-color2-div: #aa75a3;
+    --titelHeadings-color: white;
+    --creditsText-color: white;
+    --creditsTextLinks-color: white;
+    --creditsText-color: #a8ffb9;
+    --creditsTextLinks-color: gold;
+    --color-black: #111;
+  }
 
-xmlns="http://www.w3.org/2000/svg" */
+  body {
+    background-color: var(--color-background) !important;
+  }
+  main {
+    background-color: var(--color-background);
+    z-index: -100;
+  }
+
+  .feverpagina > header h1 {
+    position: absolute;
+    top: 1.5em;
+    left: 0.8em;
+    font-size: 8em;
+    line-height: 1em;
+    color: var(--titelHeadings-color);
+    text-shadow: 1px 5px 1px var(--color-black);
+    white-space: pre-line;
+    display: block;
+    transform: rotate(-25deg);
+    font-family: "WindSong", cursive;
+  }
+
+  .feverpagina main section:nth-of-type(5) p {
+    color: var(--color-white);
+  }
+
+  .feverpagina footer li {
+    color: var(--color-white);
+  }
+  .feverpagina footer li a {
+    color: var(--creditsText-color);
+  }
+
+  .feverpagina main section:nth-of-type(2) {
+    background-color: ar(--color-background);
+  }
+
+  footer {
+    background-color: var(--color-background);
+  }
+
+  .feverpagina footer ul:nth-of-type(2) li img {
+    background-color: white;
+  }
+
+  main img {
+    filter: brightness(0.7);
+  }
+
+  .feverpagina footer section {
+    width: 100vw;
+    border: solid;
+
+    border-color: var(--color-white);
+  }
+
+  .feverpagina footer ul:nth-of-type(2) {
+    border-color: var(--color-white);
+  }
+
+  .feverpagina footer button {
+    appearance: none;
+    height: 3em;
+    width: 10em;
+    background-color: var(--color-white);
+    border-style: none;
+    border-radius: 3px;
+    color: var(--color-black);
+  }
+}

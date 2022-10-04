@@ -1,21 +1,359 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="nl">
-	
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="author" content="jouw naam">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<title>Howdy FED2223</title>
-	
-	<link href="styles/style.css" rel="stylesheet">
-	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+	<meta charset="UTF-8" />
+	<meta name="author" content="jouw naam" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title>homepagina vougue.nl - oefening idelene martis</title>
+
+	<link href="styles/style.css" rel="stylesheet" />
+	<link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,
+		wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,400;1,6..96,500;1,6..96,600&family=Domine:wght@400;500;600;700&display=swap"
+		rel="stylesheet" />
 </head>
 
 <body>
-	<h1>Howdy FED2223</h1>
+	<header class="shyheader">
+		<section>
+			<h1>
+				<a href="index.html" aria-label="link naar homepagina"> <img src="images/vougue-logo-transparant.png"
+						alt="het logo van Vouge" /></a>
 
-	<script defer src="scripts/script.js"></script>
+
+			</h1>
+
+			<section>
+				<select aria-label="selecteer een taal">
+					<option value="Option 1">Nederlands ▾</option>
+					<option value="Option 2">Spaans ▾</option>
+					<option value="Option 3">Italiaans 3 ▾</option>
+					<option value="Option 4">Duits ▾</option>
+					<option value="Option 5">Frans ▾</option>
+				</select>
+
+
+				<a class="skip-to-content-link" href="#main" aria-label="skip to main content">Skip to content</a>
+				<a class="skip-to-content-link" href="#footer" aria-label="skip naar footer"> skip naar footer</a>
+
+				<!-- <button aria-label="klik hier op om het menu te openen">
+					<img src="images/hamburger-menu.svg" alt="hamburger-menu" />
+				</button> -->
+
+				<button aria-label="menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+
+				<!--hidden navigatie begin-->
+				<nav>
+					<button aria-label="Klik hier om het menu te sluiten" id="sluitknop"> <span></span>
+						<span></span>
+						<span></span> </button>
+
+					<a href="#" aria-label="het logo van vougue logo"><img src="images/vougue-logo-transparant-wit.png"
+							alt="het logo van Vouge-wit-van-kleur"></a>
+					<section>
+						<h3>Volg onze social media pagina's</h3>
+						<ul>
+							<li><a href="#" aria-label="Volg onze snapchat account"><svg class="svg-social-icon"
+										viewBox="-2 0 20 15">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"
+											fill="#fff"></path>
+									</svg></a></li>
+							<li> <a href="#" aria-label="Volg onze twitter account"><svg class="svg-social-icon"
+										xmlns="http://www.w3.org/2000/svg" width="46" height="46" fill="#000">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="m12.326 0c-6.579.001-10.076 4.216-10.076 8.812 0 2.131 1.191 4.79 3.098 5.633.544.245.472-.054.94-1.844.037-.149.018-.278-.102-.417-2.726-3.153-.532-9.635 5.751-9.635 9.093 0 7.394 12.582 1.582 12.582-1.498 0-2.614-1.176-2.261-2.631.428-1.733 1.266-3.596 1.266-4.845 0-3.148-4.69-2.681-4.69 1.49 0 1.289.456 2.159.456 2.159s-1.509 6.096-1.789 7.235c-.474 1.928.064 5.049.111 5.318.029.148.195.195.288.073.149-.195 1.973-2.797 2.484-4.678.186-.685.949-3.465.949-3.465.503.908 1.953 1.668 3.498 1.668 4.596 0 7.918-4.04 7.918-9.053-.016-4.806-4.129-8.402-9.423-8.402z"
+											fill="#fff"></path>
+									</svg></a></li>
+							<li><a href="#" aria-label="Volg onze instagram account"><svg class="svg-social-icon"
+										xmlns="http://www.w3.org/2000/svg" width="46" height="46" fill="#000"
+										viewBox="-2 0 20 16">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+											fill="#fff"></path>
+									</svg></a></li>
+							<li><a href="#" aria-label="Volg onze facebook account"><svg class="svg-social-icon"
+										xmlns="http://www.w3.org/2000/svg" width="46" height="46" fill="#000"
+										viewBox="0 0 7 15">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M4.775 14.163V7.08h1.923l.255-2.441H4.775l.004-1.222c0-.636.06-.977.958-.977H6.94V0H5.016c-2.31 0-3.123 1.184-3.123 3.175V4.64H.453v2.44h1.44v7.083h2.882z"
+											fill="#fff"></path>
+									</svg></a></li>
+							</li>
+						</ul>
+					</section>
+					<ul>
+						<li><a href="#" aria-label="link naar fasion pagina">Fashion</a></li>
+						<li><a href="#" aria-label="link naar living pagina">living</a></li>
+						<li><a href="#" aria-label="link naar Beauty pagina">Beauty</a></li>
+						<li><a href="#" aria-label="link naar culture pagina">Culture</a></li>
+					</ul>
+
+					<ul>
+						<li><a href="#" aria-label="link naar home pagina">Home</a></li>
+						<li><a href="#" aria-label="link naar Nieuwsbrief pagina">Nieuwsbrief</a></li>
+						<li><a href="#" aria-label="link naar shop pagina">Shop</a></li>
+						<li><a href="#" aria-label="link naar Colofoon pagina">Colofoon</a></li>
+					</ul>
+
+
+
+				</nav>
+				<!--hidden navigatie end-->
+
+			</section>
+		</section>
+		<!--de 2de nav-->
+		<nav>
+			<ul>
+				<li><a href="#" aria-label="link naar fasion pagina">Fashion</a></li>
+				<li><a href="#" aria-label="link naar living pagina">living</a></li>
+				<li><a href="#" aria-label="link naar Beauty pagina">Beauty</a></li>
+				<li><a href="#" aria-label="link naar culture pagina">Culture</a></li>
+			</ul>
+		</nav>
+		<!--de 2de nav-->
+	</header>
+
+
+
+	<main id="main">
+		<!--begin teaser hoofd artikel-->
+		<section>
+			<h2 class="visually-hidden"> het Hoofdartikel van de homepagina</h1>
+				<img src="images/vogue-world-trends-najaar-2022-1600x900.jpeg"
+					alt="foto van modelen na afloop fashionweek Newyork" />
+				<section>
+
+					<a href="#" aria-label="link artiekel: 5 trends die je nu moet weten – zoals gezien op de runway van ‘Vogue
+			World: New York">
+						<h2>
+							5 trends die je nu moet weten – zoals gezien op de runway van ‘Vogue
+							World: New York’
+						</h2>
+					</a>
+					<a href="#" aria-label="link naar fasion pagina">Fashion</a>
+					<p>Marijke de Brand</p>
+					<time datetime="13-09-2022">13 September 2022</time>
+				</section>
+		</section>
+		<!--einde teaser hoofd artikel-->
+
+		<!--begin section 2 Top artikelen-->
+		<section>
+			<h1>Top artikelen</h1>
+			<ul>
+				<li aria-label="top artikel 1">
+					<div>
+						<img src="images/tim-walker-cloud-9-350x350.jpeg"
+							alt="afbeelding van een vrouw in een bloemveld. Haar gezicht volledig bedekt met glinsterende goude make-up. " />
+					</div>
+
+					<div> <a href="#" aria-label="link artikel: De beste streetstylelooks van New York Fashion Week lente/zomer
+						2023">
+							<h2>
+								De beste streetstylelooks van New York Fashion Week lente/zomer
+								2023
+							</h2>
+						</a>
+						<a href="#" aria-label="link naar fasion pagina">Fashion</a>
+						<p>Marjolijn Brand</p>
+						<p>13 SEPTEMBER 2022</p>
+					</div>
+				</li>
+
+				<li aria-label="top artikel 2">
+					<div>
+						<img src="https://www.vogue.nl/wp-content/uploads/2022/09/wandler-e1664543212762-400x600.jpg"
+							alt="afbeelding van een vrouw met een roze 2 piece" />
+					</div>
+					<div>
+						<a href="#" aria-label="link naar artikel:Vogue’s cultuuragenda: de mooiste tentoonstellingen en
+						exposities in Nederland">
+							<h2>
+								Vogue’s cultuuragenda: de mooiste tentoonstellingen en
+								exposities in Nederland
+							</h2>
+						</a>
+						<a href="#" aria-label="link naar fasion pagina">Fashion</a>
+						<p>Laura Severi</p>
+						<p>13 SEPTEMBER 2022</p>
+					</div>
+				</li>
+
+				<li aria-label="top artikel 3">
+					<div>
+						<img src="https://www.vogue.nl/wp-content/uploads/2022/09/Copenhagen-Fashion-Week-by-AcielleStyleDuMonde-kopie-400x600.jpg"
+							alt="afbeelding van een vrouw in een roze 2 piece pak " />
+					</div>
+					<div>
+						<a href="#"
+							aria-label="link naar artikel: Westernmode en cowboylooks uitgelegd – waar komen de stijlen vandaan?">
+							<h2>
+								Westernmode en cowboylooks uitgelegd – waar komen de stijlen vandaan?
+							</h2>
+						</a>
+						<a href="#" aria-label="link naar fasion pagina">Fashion</a>
+						<p>Laura Severi</p>
+						<p>13 SEPTEMBER 2022</p>
+					</div>
+				</li>
+			</ul>
+
+			<section>
+				<h2 class="visually-hidden"> een korte Advertertie waarin je de mogenlijkheid krijgt een tijdschrift aan
+					te schaffen</h2>
+				<h3>Vouge
+					oktober 2022</h3>
+				<img src="https://www.vogue.nl/wp-content/uploads/2022/09/001_VOGUE_07_-COVER-250x325.jpg"
+					alt="cover afbeelding van de vouge tijdschrift Issue oktober 2022 ">
+				<button area-label="bestel met deze knop het vogue tijdschrift van oktober 2022">
+					bestel hier!
+				</button>
+			</section>
+		</section>
+		<!--einde section 2 Top artikelen-->
+
+
+		<!-- <a href="#section3-beauty"></a> -->
+
+		<!--begin section 3 Beauty-->
+		<section id="section3-beauty">
+			<h1>Beauty</h1>
+			<section>
+				<span>
+					<h2>
+						<a href="#"
+							aria-label="Link naar artikel: zilver is het nieuwe zwart in de schoenentrends dit najaar – en wij zijn fan">Zilver
+							is het nieuwe zwart in de schoenentrends dit najaar – en wij zijn fan</a>
+
+					</h2>
+					<p><a href="#" aria-label="link naar fasion pagina">Beauty news</a></p>
+					<p>Laura Severi</p>
+					<p>23 September 2022</p>
+				</span>
+				<img src="images/party-brows-peter-do-lente-zomer-2023-nyfw-640x960.jpeg"
+					alt=" afbeelding van een androgyn model in zwart pak en glitter oog make-ip " />
+			</section>
+
+			<ul>
+				<li>
+					<div><img src="https://www.vogue.nl/wp-content/uploads/2022/09/filling-pieces-header-400x600.jpg"
+							alt="afbeelding van een vrouw in een bloemveld. Haar gezicht volledig bedekt met glinsterende goude make-up. " />
+					</div>
+					<div>
+
+						<a href="#" aria-label="link artikel: De beste streetstylelooks van New York Fashion Week lente/zomer
+								2023">
+							<h2>De beste streetstylelooks van New York Fashion Week lente/zomer
+								2023 </h2>
+						</a>
+						<a href="#" aria-label="link naar Beauty pagina">Beauty news</a>
+						<p>Laura Severi</p>
+						<p>23 September 2022</p>
+					</div>
+				</li>
+			</ul>
+
+		</section>
+		<!--einde section 3 Beauty-->
+	</main>
+
+
+
+	<footer>
+		<ul>
+			<li>
+				<img src="images/vougue-logo-transparant-wit.png" alt="Het logo van vougue in wit" />
+			</li>
+			<li>
+				<ul>
+					<li><a href="#" aria-label="Volg onze snapchat account"><svg class="svg-social-icon"
+								viewBox="-2 0 20 15">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"
+									fill="#fff"></path>
+							</svg></a></li>
+					<li> <a href="#" aria-label="Volg onze twitter account"><svg class="svg-social-icon"
+								xmlns="http://www.w3.org/2000/svg" width="46" height="46" fill="#000">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="m12.326 0c-6.579.001-10.076 4.216-10.076 8.812 0 2.131 1.191 4.79 3.098 5.633.544.245.472-.054.94-1.844.037-.149.018-.278-.102-.417-2.726-3.153-.532-9.635 5.751-9.635 9.093 0 7.394 12.582 1.582 12.582-1.498 0-2.614-1.176-2.261-2.631.428-1.733 1.266-3.596 1.266-4.845 0-3.148-4.69-2.681-4.69 1.49 0 1.289.456 2.159.456 2.159s-1.509 6.096-1.789 7.235c-.474 1.928.064 5.049.111 5.318.029.148.195.195.288.073.149-.195 1.973-2.797 2.484-4.678.186-.685.949-3.465.949-3.465.503.908 1.953 1.668 3.498 1.668 4.596 0 7.918-4.04 7.918-9.053-.016-4.806-4.129-8.402-9.423-8.402z"
+									fill="#fff"></path>
+							</svg></a></li>
+					<li><a href="#" aria-label="Volg onze instagram account"><svg class="svg-social-icon"
+								xmlns="http://www.w3.org/2000/svg" width="46" height="46" fill="#000"
+								viewBox="-2 0 20 16">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+									fill="#fff"></path>
+							</svg></a></li>
+					<li><a href="#" aria-label="Volg onze facebook account"><svg class="svg-social-icon"
+								xmlns="http://www.w3.org/2000/svg" width="46" height="46" fill="#000"
+								viewBox="0 0 7 15">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M4.775 14.163V7.08h1.923l.255-2.441H4.775l.004-1.222c0-.636.06-.977.958-.977H6.94V0H5.016c-2.31 0-3.123 1.184-3.123 3.175V4.64H.453v2.44h1.44v7.083h2.882z"
+									fill="#fff"></path>
+							</svg></a></li>
+			</li>
+		</ul>
+		</li>
+		</ul>
+
+
+
+
+		<ul>
+			<li><a href="#" aria-label="link naar de homepagina">Home</a></li>
+			<li><a href="#" aria-label="link naar de Adverterenpagina">Adverteren</a></li>
+			<li><a href="#" aria-label="link naar de Nieuwsbriefpagina">Nieuwsbrief</a></li>
+			<li><a href="#" aria-label="link naar de Colofonpagina">Colofon</a></li>
+			<li><a href="#" aria-label="link naar de ebruiksvoorwaardenpagina">Gebruiksvoorwaarden</a></li>
+			<li><a href="#" aria-label="link naar de Privacy Verklaringpagina">Privacy Verklaring</a></li>
+			<li><a href="#" aria-label="link naar de Cookieverklaringpagina">Cookieverklaring</a></li>
+			<li><a href="#" aria-label="link naar de Shoppagina">Shop</a></li>
+			<li><a href="#" aria-label="link naar de Cookie-instellingenpagina">Cookie-instellingen</a></li>
+		</ul>
+
+
+		<ul>
+			<select aria-label="selecteer een taal">
+				<option value="Option 1">Nederlands ▾</option>
+				<option value="Option 2">Spaans ▾</option>
+				<option value="Option 3">Italiaans 3 ▾</option>
+				<option value="Option 4">Duits ▾</option>
+				<option value="Option 5">Frans ▾</option>
+			</select>
+
+		</ul>
+
+
+		<ul>
+			<li>
+				<p>© 2022 idelene martis test</p>
+			</li>
+			<li>
+				theme provided by me yaaay
+			</li>
+			<li>
+				<img src="images/footer-nxcode_logo_text_black.jpeg" alt="het logo van nxcode" />
+			</li>
+		</ul>
+	</footer>
+
+	<script src="scripts/script.js"></script>
 </body>
-	
+
 </html>

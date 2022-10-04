@@ -1,30 +1,46 @@
 /**************/
 /* CSS REMEDY */
 /**************/
-*, *::after, *::before {
-  box-sizing:border-box;  
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-button, summary {
-	cursor: pointer;
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,400;1,6..96,500;1,6..96,600&family=Domine:wght@400;500;600;700&display=swap");
+
+button,
+summary {
+  cursor: pointer;
 }
-
-
-
-
 
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
+
 :root {
-	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+  /* startje */
+  --background-color-body: rgb(255, 255, 255);
+  --color-text: rgb(0, 0, 0);
+  --background-color-header-footer: rgb(0, 0, 0);
+  --color-text-voeter-head: white;
+  --color-text-time: gray;
+  --color-background-white: white;
+  --color-background: rgb(0, 0, 0);
+  --select-border: #777;
+  --select-focus: blue;
+  --select-arrow: var(--select-border);
+  --afterH2-line-gold: goldenrod;
+  --border-lines-white: rgb(255, 255, 255);
+  --border-lines-black: rgb(0, 0, 0);
+  --links-hover-color-gold: goldenrod;
+  --links-visited-color: grey;
+  --background-color-lgray: rgb(238, 238, 238);
+  --button-order-color: red;
+  --botton-order-tekst: white;
 }
-
-
-
-
 
 /****************/
 /* JOUW STYLING */
@@ -33,7 +49,1121 @@ button, summary {
 /* jouw code */
 
 body {
-  color:var(--color-text);
-  background-color:var(--color-background);
+  z-index: -0;
+  /* color: var(--background-color-body); */
+
+  position: relative;
+
+  min-width: 100vw;
 }
 
+h1,
+h2 {
+  font-family: "Bodoni Moda", serif;
+  color: var(--color-text);
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 2em;
+  line-height: 1.3em;
+  /* margin-left: 0.5em; */
+  font-style: normal;
+  margin: 1em 0em 1em 0em;
+  /* padding-right: 1.5em; */
+}
+
+time {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 1em;
+  color: var(--color-text-time);
+}
+
+h2::after {
+  content: "";
+  display: block;
+  background-color: var(--afterH2-line-gold);
+  width: 30%;
+  height: 0.05em;
+  position: absolute;
+  margin-top: 0.5em;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.skip-to-content-link {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.skip-to-content-link:focus {
+  clip: rect(0 0 0 0);
+  clip-path: inset(0%);
+  height: 1px;
+
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+a {
+  color: var(--color-text);
+  font-family: "Montserrat", sans-serif;
+}
+
+header a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+header a:hover {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  text-decoration: underline;
+}
+
+header a:focus {
+  appearance: none;
+
+  outline: none !important;
+  border: 0.2em solid var(--button-order-color);
+  padding: 0.5em;
+}
+
+header {
+  background-color: var(--color-background-white);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25), inset 0 0.2em 0 black;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  left: 0;
+  right: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 0.5em 0 0 0;
+  z-index: 100;
+  margin-bottom: 100em;
+  transition: transform 0.5s;
+}
+
+.shyheader.scroll-down {
+  transform: translate3d(0, -100%, 0);
+}
+
+.shyheader .scroll-up {
+  transform: none;
+}
+
+header section select {
+  width: 70%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  padding: 5px;
+}
+
+header select {
+  appearance: none;
+  background-color: var(--color-background-white);
+  border: none;
+  padding: 0 1em 0 0;
+  margin: 0;
+  width: 50%;
+  font-family: inherit;
+  font-size: inherit;
+}
+header select:focus {
+  outline: none !important;
+  border: 0.2em solid var(--button-order-color);
+  padding: 0.5em;
+}
+
+header section select option {
+  font-family: "Montserrat", sans-serif;
+}
+
+header section section:nth-of-type(1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+}
+
+header button {
+  display: grid;
+  place-items: center;
+}
+header button:hover {
+  border: 1em solid var(--button-order-color);
+}
+header button:focus {
+  /*commment idelene: Hier is het mij niet gelukt de outline aan te passen*/
+  border: 1em solid var(--button-order-color);
+  padding: 0.05em;
+}
+header button span {
+  grid-row-start: 1;
+  grid-column-start: 1;
+  width: 1.2em;
+  height: 0.2em;
+  background-color: black;
+  transition-duration: 0.5s;
+}
+
+header button span:nth-of-type(1) {
+  transform: translateY(-0.4em);
+}
+header button span:nth-of-type(2) {
+  content: "";
+}
+header button span:nth-of-type(2) {
+  transform: translateY(0.4em);
+}
+
+header > section {
+  display: flex;
+  flex-direction: row;
+  border: solid;
+  border-width: 0 0 0.1em 0;
+  justify-content: space-around;
+}
+
+header > section h1 img {
+  width: 155px;
+  height: 45px;
+  transition: 0.5s;
+}
+
+header > section h1 img:hover {
+  border: solid;
+  border-width: 0.09em;
+  border-color: var(--button-order-color);
+  padding: 0.01em;
+}
+
+header > section button:first-of-type {
+  background: none;
+  border: none;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+header > section img {
+  width: 25px;
+  height: 25px;
+}
+
+header > section nav {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  background-color: var(--background-color-header-footer);
+  opacity: 100%;
+  transform: translateX(-100%);
+  transition: 0.3s;
+  height: 50em;
+}
+
+header > section nav.zichtbareMenu {
+  background-color: var(--background-color-header-footer);
+  transform: translateX(0%);
+  height: 120vh;
+  z-index: 100;
+  position: fixed;
+}
+
+header > section nav.zichtbareMenu img {
+  width: 155px;
+  height: 45px;
+  position: relative;
+  margin-top: 8px;
+  margin-left: 8px;
+  transition: 0.5s;
+}
+
+header > section nav.zichtbareMenu img:hover {
+  border: solid;
+  border-width: 0.09em;
+
+  border-color: var(--button-order-color);
+  padding: 0.01em;
+}
+header > section nav.zichtbareMenu img:focus {
+  outline: none !important;
+  border: 0.2em solid var(--button-order-color);
+  padding: 0.5em;
+}
+
+header > section nav.zichtbareMenu section::before {
+  content: "";
+  display: block;
+  height: 0.02em;
+  width: 80vw;
+  background-color: var(--border-lines-white);
+  margin-top: 3em;
+}
+
+header > section nav.zichtbareMenu section {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+  margin-left: 1em;
+  margin-top: 3em;
+  width: 90vw;
+  align-items: flex-start;
+}
+
+header > section nav.zichtbareMenu h3 {
+  color: var(--color-text-voeter-head);
+  font-family: "Montserrat", sans-serif;
+}
+
+header > section nav.zichtbareMenu section ul:first-of-type {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-between;
+  width: 50vw;
+}
+
+header > section nav.zichtbareMenu section ul:first-of-type li {
+  margin: 0;
+}
+
+header > section nav.zichtbareMenu ul:first-of-type li svg {
+  /* width: 90%; */
+  width: 4em;
+  height: 4em;
+  display: inline-block;
+  border: solid;
+  border-color: var(--color-background-white);
+  border-radius: 50%;
+  padding: 0.5em;
+  vertical-align: middle;
+  transition: 0.5s;
+}
+header > section nav.zichtbareMenu ul:first-of-type li svg:hover {
+  fill: var(--button-order-color);
+  border: solid;
+  border-color: var(--button-order-color);
+  border-radius: 50%;
+  border-width: 0.5em;
+}
+header > section nav.zichtbareMenu ul:first-of-type li svg:focus {
+  outline: none !important;
+  border: 0.2em solid var(--button-order-color);
+  padding: 0.5em;
+  border-radius: 50%;
+}
+
+header > section nav.zichtbareMenu > ul::before {
+  content: "";
+  display: block;
+  height: 0.2em;
+  width: 80vw;
+  background-color: var(--border-lines-white);
+  margin-top: 3em;
+  margin-left: 1em;
+}
+
+header > section nav.zichtbareMenu > ul:nth-of-type(1) {
+  list-style: none;
+}
+header > section nav.zichtbareMenu > ul:nth-of-type(1) li {
+  display: flex;
+  list-style: none;
+  display: block;
+  margin: 1em 0 1em 1em;
+}
+
+header > section nav.zichtbareMenu > ul li::after {
+  content: "";
+  display: block;
+  height: 0.01em;
+  width: 80vw;
+  background-color: var(--border-lines-white);
+  margin-top: 1em;
+}
+
+header > section nav.zichtbareMenu > ul:nth-of-type(1) li a {
+  color: var(--color-text-voeter-head);
+  font-family: "Bodoni Moda", serif;
+  font-size: 2em;
+  transition: 0.1s;
+}
+
+header > section nav.zichtbareMenu > ul:nth-of-type(1) li a:hover {
+  font-weight: bold;
+  text-decoration: none;
+  text-decoration: underline;
+  color: var(--button-order-color);
+}
+
+header > section nav.zichtbareMenu > ul:nth-of-type(2) {
+  content: "";
+}
+
+header > section nav.zichtbareMenu > ul:nth-of-type(2) li {
+  display: flex;
+  list-style: none;
+  display: block;
+  margin: 1em 0 1em 1em;
+}
+
+header > section nav.zichtbareMenu > ul:nth-of-type(2) li a {
+  color: var(--color-text-voeter-head);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  transition: 0.5s;
+}
+
+header > section nav.zichtbareMenu > ul:nth-of-type(2) li a:hover {
+  color: var(--button-order-color);
+}
+
+header > section nav.zichtbareMenu button {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  right: 3em;
+  height: 100px;
+}
+
+header > section nav.zichtbareMenu button span {
+  grid-row-start: 1;
+  grid-column-start: 1;
+  width: 1.2em;
+  height: 0.2em;
+  background-color: white;
+  transition-duration: 0.5s;
+}
+
+header > section nav.zichtbareMenu button span:nth-of-type(1) {
+  transform: rotate(45deg) scalex(2);
+}
+header > section nav.zichtbareMenu button span:nth-of-type(2) {
+  opacity: 0;
+}
+header > section nav.zichtbareMenu button span:nth-of-type(3) {
+  transform: rotate(-45deg) scalex(2);
+}
+
+/************ beging 2de nav in de header ***************/
+
+header nav a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+header > nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  list-style: none;
+}
+
+header > nav {
+  padding: 1em 0 1em 0;
+  width: 80%;
+}
+/**** einde 2de nav in de header ***/
+
+/***begin main sections****/
+
+main {
+  position: relative;
+  margin-top: 5em;
+}
+
+main h2 {
+  font-size: 1.5em;
+}
+
+main section,
+a,
+p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+main a:hover {
+  text-decoration: underline;
+
+  transform: scale(1.01);
+}
+
+main a:focus {
+  outline: none !important;
+  border: 0.2em solid var(--button-order-color);
+  padding: 0.5em;
+  transform: scale(1.01);
+}
+
+main section ul {
+  margin-top: 1em;
+  list-style: none;
+}
+
+main > section:nth-of-type(1) {
+  padding: 5em 0 0 0;
+  display: block;
+  margin-bottom: 2em;
+}
+
+main section:nth-of-type(1) section:first-of-type {
+  padding: 0;
+}
+
+main section:nth-of-type(1) > section {
+  margin-left: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+main section:nth-of-type(1) > section a:nth-of-type(2) {
+  order: -1;
+}
+
+main section:nth-of-type(1) img {
+  height: 357px;
+  width: 100vw;
+  object-fit: cover;
+  object-position: 40% 10%;
+  margin-bottom: 10%;
+  display: block;
+}
+/**schaalbare afbeelding, gerealiseerd met behulp van Sanne FED docent**/
+
+main section:nth-of-type(2) > ul > li {
+  height: fit-content;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  column-gap: 0.8rem;
+  margin-bottom: 2em;
+  padding-left: 0.8em;
+}
+
+main section:nth-of-type(2) > ul > li div:nth-of-type(1) {
+  width: 40%;
+}
+
+main section:nth-of-type(2) > ul > li div:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+main section:nth-of-type(2) > ul > li div a:nth-of-type(1) {
+  display: block;
+  height: fit-content;
+}
+
+main section:nth-of-type(2) > ul > li div a:nth-of-type(2) {
+  display: block;
+  order: -1;
+}
+
+main section:nth-of-type(2) > ul > li div a h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  display: block;
+}
+
+main section:nth-of-type(2) > ul li div img {
+  width: 100%;
+}
+
+main section:nth-of-type(2) > ul li time {
+  display: block;
+  grid-row-start: 5;
+  grid-row-end: 6;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+main section:nth-of-type(2) > ul li div p {
+  display: block;
+}
+
+main section:nth-of-type(2) > ul > li:first-of-type {
+  position: relative;
+}
+
+main section:nth-of-type(2) > ul > li:first-of-type::after {
+  content: "";
+  display: block;
+  background-color: var(--border-lines-black);
+  width: 90%;
+  height: 0.1em;
+  position: absolute;
+  bottom: -1em;
+  left: calc(50% - 90% / 2);
+}
+
+main section:nth-of-type(2) > ul > li:nth-of-type(2) {
+  position: relative;
+}
+
+main section:nth-of-type(2) > ul > li:nth-of-type(2)::after {
+  content: "";
+  display: block;
+  background-color: var(--border-lines-black);
+  width: 90%;
+  height: 0.1em;
+  position: absolute;
+  bottom: -1em;
+  left: calc(50% - 90% / 2);
+}
+main section:nth-of-type(2) > ul > li:nth-of-type(3)::after {
+  content: "";
+  display: block;
+  background-color: var(--border-lines-black);
+  width: 90%;
+  height: 0.1em;
+  position: absolute;
+  top: 2435px;
+  left: calc(50% - 90% / 2);
+}
+
+main section:nth-of-type(2) section {
+  padding: 0;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: var(--background-color-lgray);
+  border-style: solid;
+  border-color: var(--border-lines-black);
+  border-width: 0 0 0.1em 0;
+  height: 8em;
+  width: 22em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main section:nth-of-type(2) section img {
+  height: 62px;
+  width: 44px;
+  margin-bottom: 0;
+}
+
+main section:nth-of-type(2) section h3 {
+  color: var(--color-text);
+  white-space: pre-line;
+}
+
+main section:nth-of-type(2) section button {
+  appearance: none;
+  height: 3em;
+  width: 10em;
+  background-color: var(--button-order-color);
+  border-style: none;
+  border-radius: 3px;
+  color: var(--botton-order-tekst);
+  transition: 0.5s;
+}
+
+main section:nth-of-type(2) section button:focus {
+  outline-width: 2em;
+  transform: scale(1.1);
+  outline: none !important;
+  border: 0.2em solid var(--button-order-color);
+  padding: 0.5em;
+}
+main section:nth-of-type(2) section button:hover {
+  background-color: var(--links-hover-color-gold);
+  transform: scale(1.1);
+}
+
+main section:nth-of-type(3) h1::before {
+  content: "";
+  display: block;
+  background-color: var(--border-lines-black);
+  width: 30%;
+  height: 0.2em;
+}
+
+main section:nth-of-type(3) section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+}
+
+main section:nth-of-type(3) section img {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  object-position: 40% 10%;
+  margin-bottom: 10%;
+  display: block;
+}
+
+/**transperante sluier over image, gerealiseerd met behulp van SA- Sudoun*/
+
+main section:nth-of-type(3) section::after {
+  content: "";
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  bottom: 1em;
+  background-image: linear-gradient(to bottom, transparent 0%, black 70%);
+  z-index: 1;
+}
+/**transperante sluier over image, gerealiseerd met behulp van SA- Sundous*/
+
+main section:nth-of-type(3) section span {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95vw;
+  height: 100vw;
+}
+
+main section:nth-of-type(3) section span h2 {
+  font-family: "Bodoni Moda", serif;
+  top: 50%;
+  color: var(--color-text-voeter-head);
+  z-index: 2;
+  text-align: center;
+  transition: 0.5s;
+}
+
+main section:nth-of-type(3) section span h2 a {
+  font-family: "Bodoni Moda", serif;
+  top: 50%;
+  color: var(--color-text-voeter-head);
+  z-index: 2;
+  text-align: center;
+}
+main section:nth-of-type(3) section span h2:hover {
+  transform: scale(1.1);
+}
+
+main section:nth-of-type(3) section span h2 a:focus {
+  transform: scale(0);
+}
+
+main section:nth-of-type(3) section h2::after {
+  content: "";
+  display: block;
+  background-color: var(--afterH2-line-gold);
+  width: 30%;
+  height: 0em;
+  position: absolute;
+  margin-top: 0.5em;
+}
+
+main section:nth-of-type(3) section span p:nth-of-type(1) {
+  order: -1;
+  color: var(--color-text-voeter-head);
+
+  z-index: 2;
+}
+
+main section:nth-of-type(3) section span p:nth-of-type(1) a {
+  color: var(--color-text-voeter-head);
+}
+
+main section:nth-of-type(3) section span p {
+  transition: 0.5s;
+}
+main section:nth-of-type(3) section span p:nth-of-type(1):hover {
+  transform: scale(1.1);
+}
+main section:nth-of-type(3) section span p:nth-of-type(1):focus {
+  outline-width: 2em;
+  transform: scale(1.1);
+  outline: none !important;
+  border: 0.2em solid var(--button-order-color);
+  padding: 0.5em;
+}
+
+main section:nth-of-type(3) section span p:nth-of-type(2) {
+  z-index: 2;
+  color: var(--color-text-voeter-head);
+  margin-left: 12px;
+}
+
+main section:nth-of-type(3) section span p:nth-of-type(3) {
+  color: var(--color-text-voeter-head);
+  margin-left: 12px;
+  z-index: 2;
+}
+
+/************************** einde heading sectionn 3 *******************************/
+
+/************* begin main section 3 grid/flex item **************************/
+
+main section:nth-of-type(3) > ul > li {
+  height: fit-content;
+  width: 100vw;
+  border: solid;
+  display: flex;
+  flex-direction: row;
+  column-gap: 1rem;
+  margin-bottom: 2em;
+  padding-left: 0.8em;
+}
+
+main section:nth-of-type(3) > ul > li div:nth-of-type(1) {
+  border: solid;
+  width: 40%;
+}
+
+main section:nth-of-type(3) > ul > li div:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+main section:nth-of-type(3) > ul > li div a:nth-of-type(1) {
+  display: block;
+  height: fit-content;
+}
+
+main section:nth-of-type(3) > ul > li div a:nth-of-type(2) {
+  display: block;
+  order: -1;
+}
+
+main section:nth-of-type(3) > ul > li div a h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  display: block;
+}
+
+main section:nth-of-type(3) > ul li div img {
+  width: 100%;
+}
+
+main section:nth-of-type(3) > ul li div p {
+  display: block;
+}
+
+/************* einde main section 3********************************************/
+
+footer {
+  background-color: var(--background-color-header-footer);
+  display: flex;
+  flex-direction: column;
+}
+
+footer li {
+  color: var(--color-text-voeter-head);
+  text-align: center;
+}
+
+footer ul:nth-of-type(1) ul {
+  margin-top: 1em;
+}
+
+footer ul:nth-of-type(1) li {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer ul:nth-of-type(1) li ul {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  column-gap: 1em;
+  justify-content: center;
+}
+
+footer ul:nth-of-type(1) li > img {
+  width: 50%;
+  transition: 0.5s;
+}
+footer ul:nth-of-type(1) li > img:hover {
+  border: solid;
+  border-width: 0.09em;
+  border-color: var(--button-order-color);
+  padding: 0.01em;
+}
+footer ul:nth-of-type(1) li > img a:focus {
+  outline: none !important;
+  border: 0.2em solid var(--button-order-color);
+  padding: 0.5em;
+}
+
+footer ul:nth-of-type(1) svg {
+  /* width: 90%; */
+  width: 2.5em;
+  height: 2.5em;
+  display: inline-block;
+  border: solid;
+  border-color: var(--border-lines-white);
+  border-radius: 50%;
+  padding: 0.5em;
+  vertical-align: middle;
+  transition: 0.5s;
+}
+footer ul:nth-of-type(1) svg:hover {
+  fill: var(--button-order-color);
+  border: solid;
+  border-color: var(--button-order-color);
+  border-radius: 50%;
+  border-width: 0.5em;
+}
+footer ul:nth-of-type(1) svg:focus {
+  outline: none !important;
+  border: 0.2em solid var(--button-order-color);
+  padding: 0.5em;
+}
+
+footer > ul:nth-of-type(1)::after {
+  content: "";
+  display: block;
+  background-color: var(--color-background-white);
+  width: 90%;
+  height: 0.05em;
+  position: absolute;
+  margin: 1em 0 0 1em;
+}
+
+footer ul:nth-of-type(2) {
+  margin: 1em 0 1em 0;
+  /* background-color: violet; */
+}
+footer ul:nth-of-type(2) li {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+footer ul:nth-of-type(2) li a {
+  color: var(--botton-order-tekst);
+  transition: 0.5s;
+}
+footer ul:nth-of-type(2) li a:hover {
+  color: var(--button-order-color);
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  text-decoration: underline;
+}
+footer ul:nth-of-type(2) li a:focus {
+  color: var(--botton-order-tekst);
+  outline: none !important;
+  border: 0.2em solid var(--button-order-color);
+  padding: 0.5em;
+}
+
+footer ul:nth-of-type(3) select {
+  appearance: none;
+  background-color: var(--color-background-white);
+  border: none;
+  padding: 0 1em 0 0;
+  margin: 0;
+  width: 50%;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+footer ul:nth-of-type(3) {
+  margin: 0 0 1em 0;
+  display: flex;
+  justify-content: center;
+  /* background-color: orange */
+}
+footer ul:nth-of-type(4) {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+footer ul:nth-of-type(4) a {
+  font-family: "Montserrat", sans-serif;
+  color: var(--color-text-voeter-head);
+  font-size: 0.6em;
+}
+footer ul:nth-of-type(4) li {
+  font-family: "Montserrat", sans-serif;
+  color: var(--color-text-voeter-head);
+  font-size: 0.6em;
+}
+
+footer ul:nth-of-type(4) li img {
+  width: 3em;
+}
+
+footer ul:nth-of-type(3) select {
+  appearance: none;
+  /* background-color: var(--background-color-body); */
+  border: solid;
+  border-width: 0.1em;
+  border-color: var(--background-color-body);
+  padding: 1em 1em 1em 1em;
+  margin: 0;
+  width: 35%;
+  font-family: monospace;
+  color: var(--color-text);
+  text-align: center;
+}
+
+/*****************************************************************************************************************************
+******************************************************************************************************************************
+**************************************hieronder stijling voor de 80fever pagina*****************************************************************************************
+*******************************************************************************************************************************
+******************************************************************************************************************************
+****************************************************************************************/
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* startje */
+    --background-color-body: rgb(255, 255, 255);
+    --color-text: rgb(255, 255, 255);
+    --background-color-header-footer: rgb(0, 0, 0);
+    --color-text-voeter-head: white;
+    --color-text-time: white;
+    --color-background-white: black;
+    --color-background: rgb(0, 0, 0);
+    --select-border: #777;
+    --select-focus: blue;
+    --select-arrow: var(--select-border);
+    --afterH2-line-gold: white;
+    --border-lines-white: rgb(255, 255, 255);
+    --border-lines-black: rgb(255, 255, 255);
+    --links-hover-color-gold: goldenrod;
+    --links-visited-color: white;
+    --background-color-lgray: red;
+    --button-order-color: white;
+    --botton-order-tekst: white;
+  }
+
+  body {
+    background-color: black;
+    z-index: 100;
+  }
+
+  p {
+    color: var(--color-text);
+  }
+
+  a {
+    color: var(--color-text);
+  }
+
+  header {
+    border: solid;
+    border-width: 0 0 0.1em 0;
+    border-color: var(--border-lines-white);
+  }
+
+  header > section h1 img {
+    width: 155px;
+    height: 45px;
+    filter: brightness(100);
+  }
+
+  header section select {
+    background-color: var(--botton-order-tekst);
+    width: 50%;
+  }
+
+  header > section button:nth-of-type(1) {
+    background-color: var(--botton-order-tekst);
+    margin-left: 1em;
+  }
+  header > section nav.zichtbareMenu button {
+    background-color: var(--background-color-header-footer);
+    margin-left: 1em;
+  }
+
+  header > section nav.zichtbareMenu ul:first-of-type li svg {
+    /* width: 90%; */
+    width: 4em;
+    height: 4em;
+    display: inline-block;
+    border: solid;
+    border-color: var(--border-lines-white);
+    border-radius: 50%;
+    padding: 0.5em;
+    vertical-align: middle;
+    transition: 0.5s;
+  }
+
+  header > section nav.zichtbareMenu button span {
+    /* alledrie de spans in de eerste kolom en rij */
+    /* ze staan dan over elkaar heen*/
+    grid-row-start: 1;
+    grid-column-start: 1;
+
+    /* grootte en kleur van de streepjes */
+    width: 1.2em;
+    height: 0.2em;
+    background-color: white;
+    z-index: 100;
+    /* transities duren .5s */
+    transition-duration: 0.5s;
+  }
+
+  header > section img {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    filter: brightness(100);
+  }
+
+  main section:nth-of-type(2) {
+    border-color: white;
+  }
+
+  footer ul:nth-of-type(3) select {
+    /* background-color: var(--background-color-body); */
+    border: solid;
+    border-width: 0.1em;
+    border-color: var(--background-color-body);
+    padding: 1em 1em 1em 1em;
+    margin: 0;
+    width: 35%;
+    font-family: monospace;
+    color: var(--color-text);
+    text-align: center;
+  }
+
+  footer {
+    border: solid;
+    border-width: 0.1em 0 0 0;
+    border-color: var(--border-lines-white);
+  }
+
+  footer ul:nth-of-type(2) li {
+    color: var(--botton-order-tekst);
+  }
+}
