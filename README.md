@@ -257,13 +257,13 @@ planning:
   <summary>uitwerken voor eindgesprek</summary>
 
 ### Je uitkomst - karakteristiek screenshots:
-een verzameling v/d foto's 80sFever pagina
+een verzameling foto's v/d 80sFever pagina
 <img src="readme-images/80fever-resultaat-1.png" width="375px" alt="top">
-een verzameling v/d foto's 80sFever pagina
+een verzameling foto's v/d 80sFever pagina
 <img src="readme-images/80fever-resultaat-2.png" width="375px" alt="top">
-een verzameling v/d foto's homepagina
+een verzameling foto's v/d homepagina
 <img src="readme-images/homepage-resultaat-1.png" width="375px" alt="top">
-een verzameling v/d foto's homepagina
+een verzameling foto's v/d homepagina
 <img src="readme-images/homepage-resultaat-2.png" width="375px" alt="top">
   
 
@@ -272,7 +272,7 @@ een verzameling v/d foto's homepagina
 Korte omschrijving met plaatjes
 
 - Een sroll interactie toevoegen: de header verdwijnd als je naar beneden scrollt
-  (het is apart dat ik worstelde met classList.add want ik heb bij 2 elementen op de pagina een soortgelijk methode gebruikt en daar lukte het wel)
+  (het is apart dat ik worstelde met classList.add want ik heb bij 2 elementen op de homepagina een soortgelijk methode gebruikt en daar lukte het wel)
 - Een uit klap menu maken 
 - Het selecteren en positioneren van elementen. dit vond ik voeger lastig nu lukt het me wel.
 - Display flex.
@@ -288,11 +288,11 @@ Korte omschrijving met plaatjes
 
 - Ik kreeg niet alles goed focusable. hiermee bedoel ik dat bij een aantal elementen de outline van het object niet mooi omkaderd word<img src="readme-images/Tab-rare-kader.png" width="375px" alt="top">
 
-- grid vond ik ook best lastig. Ik kreeg in week 2 volgens mij het advies bepaalde sections met een grid te stijlen. Maar deze methode toepasde onder een aantal grid-rows heel veel wit ruitme. dus besloot ik om het met flex te doen omdat mij dat makkenlijker af ging.<img src="readme-images/grote-afstand-met-grid.png" width="375px" alt="top">
+- Display-grid vond ik ook best lastig. Ik kreeg in week 2 volgens mij het advies bepaalde sections met een grid te stijlen. Maar toen ik deze methode toepasde verscheen er wit ruimte onder een aantal grid-rows. dus besloot ik om het met flex te doen omdat mij dat makkenlijker af ging.<img src="readme-images/grote-afstand-met-grid.png" width="375px" alt="top">
 
 - Bij de @media query preffered dark blijven een aantal elementen de stijling behouden van de light mode. zoals de body v/d 80sFever pagina<img src="readme-images/media-query-prefered-overschrijft-oude-stijling-niet.png" width="375px" alt="top">
 
-- niet afwijken van de richtlijnen die aangeven waren in de les. ik deed mijn best maar ik waarschijnlijk wel gezondig op een plaat punten
+- Niet afwijken van de richtlijnen die aangegeven waren in de les. Ik deed mijn best maar ik heb waarschijnlijk wel gezondigt op een paar punten.
 
 
 
@@ -314,14 +314,12 @@ Korte omschrijving met plaatjes
 
 5. [ bron voor de verlegenheader ] https://webdesign.tutsplus.com/tutorials/how-to-hide-reveal-a-sticky-header-on-scroll-with-javascript--cms-33756
 
-6. [bron voor de animaties 80fever pagina]
+6. [bron voor de keyframe animaties 80fever pagina] https://codepen.io/shooft/pen/KKorGPa
 
 7. [ bron voor de hamburger knoppen] https://codepen.io/shooft/pen/dymRMBZ
 
-8. [bron voor de hover animatie op de fever pagina] https://codepen.io/shooft/pen/KKorGPa
+8. [verberg element bron] https://www.a11yproject.com/posts/how-to-hide-content/
 
-9. [verberg element bron] https://www.a11yproject.com/posts/how-to-hide-content/
-
-10. bron voor code uitklap menu Sanne't Hoofd Docent FED 
+9. bron voor code uitklap menu Sanne't Hoofd Docent FED 
 
 </details>
